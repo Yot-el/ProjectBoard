@@ -1,0 +1,58 @@
+
+.header-right-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.header-right-menu__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.header-right-menu__popover {
+    padding: 30px 15px;
+    top: 100%;
+    left: -50%;
+}
+
+.header-right-menu__notification-toggle {
+    padding: 0;
+    width: 35px;
+    height: 35px;
+    
+    cursor: pointer;
+    border: none;
+    background-image: url('../images/icons/sprite.svg#notification');
+    background-color: transparent;
+    background-size: 28px 28px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform-origin: top center;
+
+    &:hover {
+        animation: bellMove 0.5s ease-in-out;
+    }
+}
+
+@keyframes bellMove {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(6deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(-6deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}

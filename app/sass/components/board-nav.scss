@@ -1,0 +1,55 @@
+@use '../base/variables.scss' as *;
+
+.board-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+.board-nav__title {
+    position: relative;
+
+    text-align: center;
+    color: $details-color;
+}
+
+.board-nav__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+
+    overflow: auto;
+    list-style: none;
+    scrollbar-width: thin;
+}
+
+.board-nav__item {
+    padding: 6px 0;
+}
+
+.board-nav__link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    text-decoration: none;
+    color: $font-color;
+
+    &::before {
+        display: block;
+        content: "";
+        width: 32px;
+        height: 32px;
+
+        background-image: url('../images/icons/sprite.svg#board');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 21px 21px;
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

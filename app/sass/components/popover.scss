@@ -1,0 +1,20 @@
+@use '../base/variables.scss' as *;
+
+.popover {
+    display: none;
+    position: absolute;
+    max-width: 340px;
+    width: max-content;
+    min-width: 270px;
+
+    background-color: #FFFFFF;
+    
+    &--opened {
+        display: flex;
+    }
+}
+
+.popover__content {
+    flex-grow: 1;
+    max-height: 100%;
+}

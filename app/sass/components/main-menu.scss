@@ -1,0 +1,100 @@
+@use '../base/variables.scss' as *;
+
+.main-menu {
+    height: 0;
+    width: 262px;
+    display: flex;
+    flex-direction: column;
+    
+    background-color: transparent;
+
+    &--opened {
+        height: calc(100vh - 100px);
+    }
+}
+
+.main-menu__toggle {
+    top: -70px;
+    right: 28px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+
+    // Доделать на закрытие / раскрытие
+    &::before {
+        content: "";
+        position: absolute;
+        width: 26px;
+        height: 18px;
+        background-image: url('../images/icons/sprite.svg#main-menu-open');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.main-menu__inner {
+    max-height: 100%;
+    position: relative;
+    padding: 20px 28px 0 40px;
+    display: none;
+    flex-grow: 1;
+    grid-template-rows: min-content 1fr min-content;
+
+    background-color: #FFFFFF;
+
+    &--opened {
+        display: grid;
+    }
+}
+
+.main-menu__site-nav {
+    margin: 0 0 40px 0;
+}
+
+.main-menu__board-nav {
+    padding: 10px 0 2px 0;
+    max-height: 100%;
+    overflow: hidden;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: 187px;
+        height: 2px;
+        top: 0;
+        left: 0;
+
+        background-color: $bg-color;
+    }
+}
+
+.main-menu__team-info {
+    position: relative;
+    padding: 20px 0;
+
+    &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #F6F6F9;
+    }
+}
+
+.main-menu__popover {
+    padding: 39px;
+    height: 100vh;
+    top: -100px;
+    left: 100%;
+}

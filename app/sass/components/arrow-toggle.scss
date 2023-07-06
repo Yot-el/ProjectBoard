@@ -1,0 +1,18 @@
+@use '../base/variables.scss' as *;
+
+.arrow-toggle {
+    padding: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+
+    background-image: url('../images/icons/sprite.svg#arrow-icon');
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}

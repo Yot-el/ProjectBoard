@@ -1,0 +1,51 @@
+@use '../base/variables.scss' as *;
+
+.site-nav {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    list-style: none;
+}
+
+.site-nav__item {
+    padding: 6px 0;
+}
+
+.site-nav__link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    text-decoration: none;
+    color: $font-color;
+
+    &::before {
+        display: block;
+        content: "";
+        width: 32px;
+        height: 32px;
+
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &--home {
+        &::before {
+            background-image: url('../images/icons/sprite.svg#home');
+            background-size: 20px 21px;
+        }
+    }
+
+    &--settings {
+        &::before {
+            background-image: url('../images/icons/sprite.svg#settings');
+            background-size: 23px 23px;
+        }
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

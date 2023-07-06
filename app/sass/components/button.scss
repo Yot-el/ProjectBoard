@@ -1,0 +1,35 @@
+@use '../base/variables.scss' as *;
+
+.button {
+    padding: 7px 21px;
+    align-self: start;
+    
+    font-family: $font;
+    font-size: 12px;
+    line-height: 1.5em;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-align: center;
+
+    border-radius: 10px;
+    border: none;
+    background: $accent-color;
+    cursor: pointer;
+
+    transition: opacity 0.3s linear;
+
+    &:hover {
+        opacity: 0.6;
+    }
+
+    &--create {
+        padding: 7px 27px;
+    }
+
+    &--save {
+        font-size: 16px;
+        border-radius: 20px;
+        padding: 14px 100px;
+        background: $form-save-button;
+    }
+}

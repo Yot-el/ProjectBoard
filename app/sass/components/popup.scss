@@ -1,0 +1,64 @@
+@use '../base/variables.scss' as *;
+
+.popup {
+    position: relative;
+    z-index: 1;
+    display: none;
+    padding: 40px;
+    width: 500px;
+
+    background-color: #FFFFFF;
+
+    &--opened {
+        display: block;
+    }
+}
+
+.popup__title {
+    margin: 0 0 20px 0;
+
+    font-size: 24px;
+    line-height: 1.5em;
+    color: transparent;
+
+    background-size: 100%;
+    background-image: $accent-color;
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    &--new-task {
+        font-size: 20px;
+    }
+
+    &--task {
+        font-size: 20px;
+    }
+}
+
+.popup__close-toggle {
+    padding: 0;
+    position: absolute;
+    top: 20px;
+    right: 40px;
+
+    width: 20px;
+    height: 20px;
+
+    border: none;
+    background-image: url('../images/icons/sprite.svg#close-popup');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-size: 20px 20px;
+
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.6;
+    }
+
+    &:active {
+        opacity: 0.3;
+    }
+}
+

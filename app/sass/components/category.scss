@@ -1,0 +1,66 @@
+@use '../base/variables.scss' as *;
+
+.category {
+    min-width: 210px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.category__title {
+    margin: 0;
+    padding: 25px 0;
+    text-align: center;
+    font-size: 24px;
+    line-height: 1.5em;
+    color: #FFFFFF;
+
+    border-radius: 20px;
+
+    &--to-do {
+        background-color: $to-do-theme;
+    }
+
+    &--in-work {
+        background-color: $in-work-theme;
+    }
+
+    &--not-done {
+        background-color: $not-done-theme;
+    }
+
+    &--done {
+        background-color: $done-theme;
+    }
+}
+
+.category__task-list {
+    overflow: auto;
+    scrollbar-width: thin;
+}
+
+.category__new-task-toggle {
+    padding: 12px 28px 12px 14px;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+
+    text-align: start;
+    font-family: $font;
+    font-size: 14px;
+    line-height: 1.5em;
+    color: $font-color-3;
+
+    cursor: pointer;
+    border: none;
+    background-color: #FFFFFF;
+
+    &::after {
+        content: "";
+        width: 24px;
+        height: 24px;
+
+        background-image: url('../images/icons/sprite.svg#plus-icon-round');
+    }
+}

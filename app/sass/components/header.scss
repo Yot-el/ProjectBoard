@@ -1,0 +1,41 @@
+.header {
+    display: flex;
+    position: relative;
+
+    background-color: #FFFFFF;
+}
+
+.header__logo {
+    align-self: start;
+}
+
+.header__inner {
+    height: 100px;
+    display: grid;
+    grid-template-columns: 262px auto min-content;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.header__left {
+    padding: 0 0 0 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header__nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.header__center {
+    padding: 0 0 0 40px;
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+.header__right {
+    padding: 0 130px 0 0;
+}

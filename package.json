@@ -1,0 +1,23 @@
+{
+  "name": "projectboard",
+  "version": "1.0.0",
+  "description": "Проект по практике",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "del": "^7.0.0",
+    "gulp": "^4.0.2",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-stacksvg": "^2.0.2",
+    "sass": "^1.63.6"
+  }
+}

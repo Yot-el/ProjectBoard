@@ -1,0 +1,63 @@
+@use '../base/variables.scss' as *;
+
+.task-card {
+    padding: 20px 14px 14px 14px;
+    display: grid;
+    grid-template-columns: min-content 20px;
+    justify-content: space-between;
+    row-gap: 10px;
+
+    color: $font-color-3;
+
+    cursor: pointer;
+    background-color: #FFFFFF;
+}
+
+.task-card__icon {
+    background-image: url('../images/icons/sprite.svg#task-card-icon');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 19px 5px;
+}
+
+.task-card__title {
+    margin: 0;
+
+    font-size: 18px;
+    line-height: 1.5em;
+    font-weight: 400;
+    color: $font-color-2;
+
+    grid-column: span 2;
+}
+
+.task-card__theme {
+    padding: 7px 11px;
+    font-size: 12px;
+    line-height: 1.5em;
+
+    border-radius: 10px;
+    background-color: $task-theme-color;
+}
+
+.task-card__description {
+    margin: 0;
+    max-height: 150px;
+    overflow: hidden; 
+
+    font-size: 14px;
+    line-height: 1.5em;
+
+    grid-column: span 2;
+}
+
+.task-card__attachment {
+    grid-column: span 2;
+}
+
+.task-card__date {
+    grid-column: span 2;
+
+    font-size: 12px;
+    line-height: 1.5em;
+}

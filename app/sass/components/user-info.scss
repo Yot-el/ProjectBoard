@@ -1,0 +1,42 @@
+@use '../base/variables.scss' as *;
+
+.user-info {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    gap: 12px;
+
+    text-decoration: none;
+    color: $font-color;
+}
+
+.user-info__avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+
+    color: #FFFFFF;
+
+    border-radius: 50%;
+    background: $accent-color;
+}
+
+.user-info:hover .user-info__toggle {
+    animation: arrowDownMove 0.5s ease-out;
+}
+
+@keyframes arrowDownMove {
+    0% {
+        top: 0;
+    }
+
+    50% {
+        top: 3px;
+    }
+
+    100% {
+        top: 0;
+    }
+}

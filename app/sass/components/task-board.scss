@@ -1,0 +1,13 @@
+.task-board {
+    padding: 20px 0 0 0;
+    margin: 0 auto;
+    width: calc(100% - 100px);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.task-board__category {
+    max-height: 100%;
+    overflow: hidden;
+}

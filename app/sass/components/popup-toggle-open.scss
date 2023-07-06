@@ -1,0 +1,25 @@
+.popup-toggle-open {
+    padding: 0;
+    width: 40px;
+    height: 40px;
+
+    font-size: 14px;
+
+    border: none;
+    background-image: url('../images/icons/sprite.svg#plus-icon');
+    background-size: 28px 28px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+
+    cursor: pointer;
+    transition: background-size 0.1s linear;
+
+    &:hover {
+        background-size: 31px 31px;
+    }
+
+    &:active {
+        opacity: 0.6;
+    }
+}

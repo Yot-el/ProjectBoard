@@ -1,0 +1,112 @@
+@use '../base/variables.scss' as *;
+
+.team-menu {
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.team-menu__name {
+    margin: 0;
+
+    font-size: 20px;
+    line-height: 1.5em;
+    color: transparent;
+
+    background-size: 100%;
+    background-image: $accent-color;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.team-menu__links-list {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    list-style: none;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 187px;
+        height: 2px;
+        top: -10px;
+        left: 0;
+        background-color: $bg-color;
+    }
+}
+
+.team-menu__links-item {
+    display: flex;
+}
+
+.team-menu__link {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    gap: 14px;
+
+    color: $font-color-3;
+    text-decoration: none;
+
+    background: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &::before {
+        display: block;
+        content: "";
+        width: 36px;
+        height: 36px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    &--log-out {
+        font-size: 12px;
+        line-height: 1.5em;
+
+        &::before {
+            background-image: url('../images/icons/sprite.svg#log-out');
+            background-size: 20px 20px;
+        }
+    }
+
+    &--new-member {
+        &::before {
+            background-image: url('../images/icons/sprite.svg#plus-icon');
+            background-size: 28px 28px;
+        }
+    }
+}
+
+.team-menu__button {
+    transform: rotate(90deg);
+
+    &:hover {
+        animation: arrowLeftMove 0.5s ease-out;
+    }
+}
+
+
+@keyframes arrowLeftMove {
+    0% {
+        left: 0;
+    }
+
+    50% {
+        left: -3px;
+    }
+
+    100% {
+        left: 0;
+    }
+}

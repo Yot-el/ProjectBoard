@@ -1,0 +1,121 @@
+@use '../base/variables.scss' as *;
+
+.form {
+    padding: 2px 5px 2px 2px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-height: 80vh;
+    overflow: auto;
+    scrollbar-width: thin;
+}
+
+.form__group {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form__label {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form__input-title {
+    width: fit-content;
+    cursor: pointer;
+    padding: 0 0 0 14px;
+}
+
+.form__input {
+    flex-grow: 1;
+    padding: 14px 15px;
+
+    font-size: 12px;
+    font-family: $font;
+    color: $font-color-2;
+
+    border-radius: 15px;
+    border: none;
+    background-color: $bg-color;
+
+    &::placeholder {
+        color: $details-color;
+    };
+
+    &:not(:placeholder-shown):invalid {
+        outline: 1px solid $error;
+    }
+
+    &--textarea {
+        margin: 0;
+        min-height: 90px;
+        resize: none;
+    }
+
+    &--attachment {
+        display: none;
+    }
+}
+
+.form__attachment-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+
+    font-size: 12px;
+    color: $details-color;
+
+    cursor: pointer;
+    outline: dashed 1px $form-attachment;
+    border-radius: 15px;
+}
+
+.form__submit-button {
+    align-self: center;
+    margin: 0 0 10px 0;
+}
+
+// Theme List
+
+.form__theme-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    font-size: 12px;
+    line-height: 1.5em;
+
+    list-style: none;
+}
+
+.form__theme-list-item {
+    cursor: pointer;
+    border-radius: 15px;
+    padding: 10px;
+    transition: background-color 0.3s linear;
+
+    outline: dashed 1px $theme-color;
+
+    // :has() Doesn't support in FF
+
+    &:has(input:checked) {
+        background-color: $theme-color;
+        outline: none;
+    }
+}
+
+.form__theme-list-label {
+    cursor: pointer;
+    background-color: transparent;
+    padding: 10px;
+}
+

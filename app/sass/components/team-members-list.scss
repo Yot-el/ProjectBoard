@@ -1,0 +1,14 @@
+.team-members-list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+
+    height: min-content;
+    max-height: 100%;
+    overflow: auto;
+    scrollbar-width: thin;
+
+    list-style: none;
+}
