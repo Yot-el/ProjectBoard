@@ -13,20 +13,13 @@ const sass = gulpSass(dartSass);
 
 // CSS
 
-function testStyles() {
+function styles() {
     return gulp.src('app/sass/style.scss', { sourcemaps: true })
         .pipe(plumber())
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(rename('style.min.css'))
         .pipe(gulp.dest('dist/css'), { sourcemaps: '.' })
         .pipe(browserSync.stream())
-}
-
-function buildStyles() {
-    return gulp.src('app/sass/**/*.scss')
-        .pipe(plumber())
-        .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('dist/css/components'))
 }
 
 // Images
@@ -41,18 +34,6 @@ function copyImages() {
 function makeStack() {
     return gulp.src('app/images/icons/test/*.svg')
         .pipe(stacksvg({ output: `sprite` }))
-        .pipe(gulp.dest('dist/images/icons'))
-}
-
-function makeHeaderStack() {
-    return gulp.src('app/images/icons/header/*.svg')
-        .pipe(stacksvg({ output: `header` }))
-        .pipe(gulp.dest('dist/images/icons'))
-}
-
-function makeMainStack() {
-    return gulp.src('app/images/icons/header/*.svg')
-        .pipe(stacksvg({ output: `main` }))
         .pipe(gulp.dest('dist/images/icons'))
 }
 
@@ -101,19 +82,18 @@ function cleanDist() {
 export const build = gulp.series(
     cleanDist,
     gulp.parallel(
-        buildStyles,
+        styles,
         scripts,
         html,
         copyImages,
-        makeHeaderStack,
-        makeMainStack
+        makeStack
     )
 );
 
 export default gulp.series(
     cleanDist,
     gulp.parallel(
-        testStyles,
+        styles,
         scripts,
         html,
         copyImages,
