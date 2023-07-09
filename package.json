@@ -19,5 +19,8 @@
     "gulp-sass": "^5.1.0",
     "gulp-stacksvg": "^2.0.2",
     "sass": "^1.63.6"
+  },
+  "engines": {
+    "node": "^16"
   }
 }
