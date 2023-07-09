@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyBoard</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="page__body">
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__left">
+                <a class="header__logo" href="index.html">
+                    <img src="images/logo.svg" width="126" height="36" alt="Логотип 'MyBoard'.">
+                </a>
+                <nav class="header__nav main-menu">
+                    <button class="main-menu__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+                    <div class="main-menu__inner">
+                        <ul class="main-menu__site-nav site-nav">
+                            <li class="site-nav__item">
+                                <a class="site-nav__link site-nav__link--home" href="index.html">Главная</a>
+                            </li>
+                            <li class="site-nav__item">
+                                <a class="site-nav__link site-nav__link--settings" href="settings.html">Настройки</a>
+                            </li>
+                        </ul>
+                        <div class="main-menu__board-nav board-nav">
+                            <span class="board-nav__title">Мои доски</span>
+                            <ul class="board-nav__list">
+                                <li class="board-nav__item">
+                                    <a class="board-nav__link" href="#">Task board #1</a>
+                                </li>
+                                <li class="board-nav__item">
+                                    <a class="board-nav__link" href="#">Task board #2</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <section class="main-menu__team-info team-info team-menu-toggle">
+                            <h2 class="team-info__name">Team name</h2>
+                            <div class="team-info__avatar">T</div>
+                            <span class="team-info__members">
+                                <span class="team-info__members-count">4</span> участника
+                            </span>
+                            <span class="arrow-toggle team-info__toggle">
+                                <span class="visually-hidden">Информация о команде</span>
+                            </span>
+                        </section>
+                    </div>
+                    <div class="main-menu__popover popover">
+                        <section class="popover__content team-menu">
+                            <h2 class="team-menu__name">Team name</h2>
+                            <ul class="team-members-list">
+                                <li class="team-member-info">
+                                    <div class="team-member-info__avatar">
+                                        U
+                                    </div>
+                                    <span class="team-member-info__name">User</span>
+                                    <button class="team-member-info__delete-button" type="button"><span class="visually-hidden">Удалить участника</span></button>
+                                </li>
+                            </ul>
+                            <ul class="team-menu__links-list">
+                                <li class="team-menu__links-item">
+                                    <a class="team-menu__link team-menu__link--new-member popup-toggle-open new-member-toggle" href="#">Добавить участника</a>
+                                </li>
+                                <li class="team-menu__links-item">
+                                    <a class="team-menu__link team-menu__link--log-out" href="#">Выйти из команды</a>
+                                </li>
+                            </ul>
+                            <button class="arrow-toggle team-menu__button team-menu-toggle" type="button"><span class="visually-hidden">Закрыть панель</span></button>
+                        </section>
+                    </div>
+                </nav>
+            </div>
+            <div class="header__center">
+                <h1 class="page__title">Task board #1</h1>
+                <button class="popup-toggle-open new-board-toggle" type="button">
+                    <span class="visually-hidden">Создать новую доску</span>
+                </button>
+            </div>
+            <div class="header__right header-right-menu">
+                <div class="header-right-menu__item">
+                    <button class="header-right-menu__notification-toggle" type="button">
+                        <span class="visually-hidden">Уведомления</span>
+                    </button>
+                </div>
+                <div class="header-right-menu__item">
+                    <a class="user-info" href="user-menu.html">
+                        <div class="user-info__avatar">U</div>
+                        <span class="user-info__name">User</span>
+                        <span class="user-info__toggle arrow-toggle"></span>
+                    </a>
+                    <div class="header-right-menu__popover popover">
+                        <ul class="popover__content user-menu">
+                            <li class="user-menu__item">
+                                <a class="user-menu__link user-menu__link--new-team" href="#">Создать новую команду</a>
+                            </li>
+                            <li class="user-menu__item">
+                                <a class="user-menu__link user-menu__link--log-out" href="#">Выйти из аккаунта</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="page__main task-board">
+        <section class="task-board__category category category--to-do">
+            <h2 class="category__title category__title--to-do">Нужно сделать</h2>
+            <ul class="category__task-list task-list">
+            </ul>
+            <button class="category__new-task-toggle new-task-toggle">Создать новое задание</button>
+        </section>
+        <section class="task-board__category category category--in-work">
+            <h2 class="category__title category__title--in-work">В разработке</h2>
+            <ul class="category__task-list task-list">
+                <li class="task-card task-toggle">
+                    <span class="task-card__theme">Программирование</span>
+                    <span class="task-card__icon"></span>
+                    <h3 class="task-card__title">Task name</h3>
+                    <p class="task-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <div class="task-card__attachment"></div>
+                    <span class="task-card__date">08.07.2023</span>
+                </li>
+            </ul>
+            <button class="category__new-task-toggle new-task-toggle">Создать новое задание</button>
+        </section>
+        <section class="task-board__category category category--not-done">
+            <h2 class="category__title category__title--not-done">Просрочено</h2>
+            <ul class="category__task-list task-list">
+            </ul>
+            <button class="category__new-task-toggle new-task-toggle">Создать новое задание</button>
+        </section>
+        <section class="task-board__category category category--done">
+            <h2 class="category__title category__title--done">Сделано</h2>
+            <ul class="category__task-list task-list">
+            </ul>
+            <button class="category__new-task-toggle new-task-toggle">Создать новое задание</button>
+        </section>
+
+        <!-- Popups -->
+        <div class="popup-container">
+            <section class="popup popup--new-board">
+                <h2 class="popup__title">Создание новой доски</h2>
+                <button class="popup__close-toggle new-board-toggle" type="button"></button>
+                <form class="form" action="#" method="post">
+                    <label class="form__label">
+                        <span class="visually-hidden">Название доски</span>
+                        <input class="form__input" type="text" name="new-board-name" placeholder="Введите название" maxlength="70" required>
+                    </label>
+                    <button class="button button--create" type="submit">Создать</button>
+                </form>
+            </section>
+            <section class="popup popup--new-member">
+                <h2 class="popup__title">Добавить участника</h2>
+                <button class="popup__close-toggle new-member-toggle" type="button"></button>
+                <form class="form" action="#" method="post">
+                    <label class="form__label">
+                        <span class="visually-hidden">Имя пользователя</span>
+                        <input class="form__input" type="email" name="new-member-email" placeholder="Введите email участника" required>
+                    </label>
+                    <button class="button" type="submit">Добавить</button>
+                </form>
+            </section>
+            <section class="popup popup--new-task">
+                <h2 class="popup__title popup__title--new-task">Создайте новое задание</h2>
+                <button class="popup__close-toggle new-task-toggle" type="button"></button>
+                <form class="form" action="#" method="post">
+                    <div class="form__group" role="group">
+                        <span class="form__input-title">Тема</span>
+                        <ul class="form__theme-list">
+                            <li class="form__theme-list-item">
+                                <label class="form__theme-list-label">
+                                    <input class="visually-hidden" type="radio" name="task-theme" value="programming" checked>
+                                    Программирование
+                                </label>
+                            </li>
+                            <li class="form__theme-list-item">
+                                <label class="form__theme-list-label">
+                                    <input class="visually-hidden" type="radio" name="task-theme" value="design">
+                                    Дизайн
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <label class="form__label">
+                        <span class="form__input-title">Заголовок задачи</span>
+                        <input class="form__input" type="text" name="task-name" placeholder="Введите заголовок задачи" maxlength="150" required>
+                    </label>
+                    <label class="form__label">
+                        <span class="form__input-title">Описание</span>
+                        <textarea class="form__input form__input--textarea" name="task-description" placeholder="Введите описание"></textarea>
+                    </label>
+                    <label class="form__label">
+                        <span class="form__input-title">Фото</span>
+                        <span class="form__attachment-wrapper">
+                            <span class="form__attachment-name">Загрузите ваше фото:</span>
+                            <input class="form__input--attachment" type="file" name="task-attachment">
+                        </span>
+                    </label>
+                    <label class="form__label">
+                        <span class="form__input-title">Дата</span>
+                        <input class="form__input" type="text" name="task-date" pattern="\d{2}.\d{2}.2\d{3}" placeholder="Введите дату" required>
+                    </label>
+                    <label class="form__label">
+                        <span class="form__input-title">Статус</span>
+                        <select class="form__input new-task-select" name="task-status">
+                            <option value="to-do" selected>Нужно сделать</option>
+                            <option value="in-work">В разработке</option>
+                            <option value="not-done">Просрочено</option>
+                            <option value="done">Выполнено</option>
+                        </select>
+                    </label>
+                    <button class="form__submit-button button button--save" type="submit">Сохранить</button>
+                </form>
+            </section>
+            <section class="popup popup--task">
+                <h2 class="popup__title popup__title--task">Настройки</h2>
+                <button class="popup__close-toggle task-toggle" type="button"></button>
+                <form class="form" action="#" method="post">
+                    <div class="form__group" role="group">
+                        <span class="form__input-title">Тема</span>
+                        <ul class="form__theme-list">
+                            <li class="form__theme-list-item">
+                                <label class="form__theme-list-label">
+                                    <input class="visually-hidden" type="radio" name="task-theme" value="programming">
+                                    Программирование
+                                </label>
+                            </li>
+                            <li class="form__theme-list-item">
+                                <label class="form__theme-list-label">
+                                    <input class="visually-hidden" type="radio" name="task-theme" value="design">
+                                    Дизайн
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <label class="form__label">
+                        <span class="form__input-title">Заголовок задачи</span>
+                        <input class="form__input" type="text" name="task-name" placeholder="Введите заголовок задачи" maxlength="150" required>
+                    </label>
+                    <label class="form__label">
+                        <span class="form__input-title">Описание</span>
+                        <textarea class="form__input form__input--textarea" name="task-description" placeholder="Введите описание"></textarea>
+                    </label>
+                    <label class="form__label">
+                        <span class="form__input-title">Фото</span>
+                        <span class="form__attachment-wrapper">
+                            <span class="form__attachment-name">Загрузите ваше фото:</span>
+                            <input class="form__input--attachment" type="file" name="task-attachment">
+                        </span>
+                    </label>
+                    <label class="form__label">
+                        <span class="form__input-title">Дата</span>
+                        <input class="form__input" type="text" name="task-date" pattern="\d{2}.\d{2}.2\d{3}" placeholder="Введите дату" required>
+                    </label>
+                    <label class="form__label">
+                        <span class="form__input-title">Статус</span>
+                        <select class="form__input new-task-select" name="task-status">
+                            <option value="to-do" selected>Нужно сделать</option>
+                            <option value="in-work">В разработке</option>
+                            <option value="not-done">Просрочено</option>
+                            <option value="done">Выполнено</option>
+                        </select>
+                    </label>
+                    <button class="form__submit-button button button--save" type="submit">Сохранить</button>
+                </form>
+            </section>
+        </div>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+</html>
